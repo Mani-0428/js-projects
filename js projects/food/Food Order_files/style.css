@@ -1,0 +1,40 @@
+nav{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+
+}
+ul,h1,li{
+    display: inline;
+}
+ul{
+    margin-left: 10%;
+}
+li{
+    cursor: pointer;
+}
+.box{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    display: inline-block;
+    width: 220px;
+    margin: 20px;
+}
+.product{
+    text-align: center;
+    cursor: pointer;
+}
+.Contact{
+    border-color: black;
+    border-width: 20px;
+    border-style: solid;
+    background-color: black;
+    color: white;
+}
+.box2{
+    display: block;
+}
+
+

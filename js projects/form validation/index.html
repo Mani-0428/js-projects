@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <link rel="stylesheet" href="style.css">
+    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Create Account</h2>
+        </div> 
+        <form class="form" id="form">
+            <div class="form-control">
+                <label>User Name</label>
+                <input type="text" placeholder="Frontend Forever" id="username">
+                <i class="fa-solid fa-badge-check"></i>
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <small>Error Message</small>
+
+            </div>
+                <div class="form-control">
+                    <label>Email</label>
+                    <input type="email" placeholder="mm@gmail.com" id="email">
+                    <i class="fas fa-check-Circle"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <small>Error Message</small>
+    
+                </div>
+                <div class="form-control">
+                    <label>Password</label>
+                    <input type="password" placeholder="password" id="password">
+                    <i class="fa-solid fa-badge-check"></i>
+                    <i class="fa-solid fa-exclamation-circle"></i>
+                    <small>Error Message</small>
+                    
+    
+                </div>
+                <div class="form-control">
+                    <label>Confirm Password</label>
+                    <input type="email" placeholder="Confirm Password" id="password2">
+                    <i class="fa-solid fa-badge-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <small>Error Message</small>
+    
+                </div>
+                <button>Submit</button>
+        </form>
+        <script>
+            var form = document.getElementById("form");
+            var username = document.getElementById("username");
+            var Email = document.getElementById("email");
+            var password = document.getElementById("password");
+            var password2= document.getElementById("password2");
+
+
+            form.addEventListener('submit',event =>{
+                event.preventDefault();
+                checkInput();
+            });
+            function checkInput(){
+                const usernameValue = username.value.trim();
+                const emailValue = email.value.trim();
+                const passwordValue = password.value.trim();
+                const password2Value = password2.value.trim();
+
+                if( usernameValue === ''){
+                    setError(username, 'username Cannot Be Blank');
+
+                }
+                else{
+                    setSuccess(username);
+                }
+
+
+                if(emailValue === ''){
+                    setError(email, 'email Cannot Be Blank');
+                }
+                else if(!isEmail(emailValue))
+                {
+                    setError( email, 'Not a Valid Email');
+                }
+                else{
+                    setSuccess(email);
+                }
+            
+            if( passwordValue === '')
+            {
+                    setError(password, 'password Cannot Be Blank');
+
+                }
+                else if(passwordValue !== password2Value){
+                    setError(password2,'password Does Not Match');
+            
+            }
+                else{
+                    setSuccess(password);
+                }
+                if( passwordValue2 === '')
+            {
+                    setError(password2, 'password Cannot Be Blank');
+
+                }
+                else if(passwordValue !== password2Value){
+                    setError(password2,'password Does Not Match');
+            
+            }
+                else{
+                    setSuccess(password2);
+                }
+            
+            }
+               function setError(input, message){
+                const formControl = input.parentElement;
+                const small = formControl.querySelector('small');
+                formControl.className = 'form-Control error';
+                small.innerText = message;
+               }
+               function setSuccess(input){
+                const formControl = input.parentElement;
+                formControl.className = 'form-Control succes';
+
+               }
+            
+
+
+            function isEmail(email){
+                return 
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>script Excercise</title>
+<style>
+    .dummyStyling{
+        background-color: turquoise;
+        color: black;
+    }
+</style>
+</head>
+<body style="text-align: center;">
+   <h1>Frontend Frever</h1>
+   <button onclick="addatr()">Add Attribute</button>
+   <button onclick="remoatr()">Remove Attribute</button>
+
+</body>
+    <script>
+        function addatr(){
+            var attribute = document.createAttribute("class");
+            attribute.value = "dummyStyling";
+            document.getElementsByTagName("h1")[0].setAttributeNode(attribute);
+        }
+        function remoatr(){
+            document.getElementsByTagName("h1")[0].removeAttribute("class");
+        }
+        
+
+    
+       
+    </script>
+</html>

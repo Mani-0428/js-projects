@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="outerclock">
+    <div class="innerclock"></div>
+    <div class="circle"></div>
+    <div id="hour"></div>
+    <div id="min"></div>
+    <div id="sec"></div>
+    </div>
+    <div class="time">
+        <p>12</p>
+        <p>9</p>
+        <p>6</p>
+        <p>3</p>
+    </div>
+    
+
+</body>
+</html>
+<script>
+    setInterval(()=>{
+
+        d= new Date();
+        hhour = d.getHours();
+        hmin = d.getMinutes();
+        hsec = d.getSeconds();
+
+        hourrot = 30*hhour+hmin/2;
+        minrot= 6*hmin;
+        sector=6*hsec;
+
+        sec.style.transform = 'rotate(${sector}deg)';
+        min.style.transform = 'rotate(${hmin}deg)';
+        hour.style.transform = 'rotate(${hhour}deg)';
+
+    },1000);
+</script>

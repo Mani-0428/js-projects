@@ -1,0 +1,106 @@
+body{
+    background-color: grey;
+    cursor: pointer;
+}
+.outerclock{
+width: 350px;
+height: 350px;
+background-color: #5e5e5e;
+box-shadow: 6px 6px 8px gray,-6px -6px 8px white;
+position: relative;
+margin-left: 35%;
+margin-top: 10%;
+border-radius: 50%;
+
+}
+.innerclock{
+    width: 280px;
+height: 280px;
+position: absolute;
+left: 10%;
+right: 10%;
+border-radius: 50%;
+background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url("che.jpg");
+background-size: cover;
+
+}
+.circle{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 46%;
+    left: 46%;
+    background-color: black;
+    border-radius: 50%;
+    z-index: 4;
+}
+#hour{
+    width: 10px;
+    height: 75px;
+    background-color: #00E5FF;
+    position: absolute;
+    top: 24%;
+    left: 47%;
+    border-radius: 50% 50% 0px 0px;
+    transform-origin: bottom;
+    z-index: 2;
+}
+#min{
+    width: 8px;
+    height: 110px;
+    background-color:yellow;
+    position: absolute;
+    top: 11%;
+    left: 47%;
+    border-radius: 50% 50% 0px 0px;
+    transform-origin: bottom;
+    z-index: 1;
+}
+#min{
+    width: 5px;
+    height: 120px;
+    background-color:red;
+    position: absolute;
+    top: 8%;
+    left: 48%;
+    border-radius: 50% 50% 0px 0px;
+    transform-origin: bottom;
+    z-index: 3;
+}
+.time{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px gray;
+
+}
+.time p:nth-child(1){
+position: absolute;
+left: 48%;
+top: 10%;
+}
+.time p:nth-child(2){
+    position: absolute;
+    left: 30%;
+    bottom: 10%;
+    top: 45%;
+    bottom: 70%;
+    right: 50%;
+   
+    }
+.time p:nth-child(3){
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    right: 50%;
+   
+    }
+    .time p:nth-child(4){
+        position: absolute;
+        left: 65%;
+        bottom: 10%;
+        top: 40%;
+        bottom: 30%;
+        right: 70%;
+       
+        }
